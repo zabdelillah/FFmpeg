@@ -540,6 +540,7 @@ extern const AVFilter ff_vf_yaepblur;
 extern const AVFilter ff_vf_zmq;
 extern const AVFilter ff_vf_zoompan;
 extern const AVFilter ff_vf_zscale;
+extern const AVFilter ff_vf_gltransition;
 extern const AVFilter ff_vf_hstack_vaapi;
 extern const AVFilter ff_vf_vstack_vaapi;
 extern const AVFilter ff_vf_xstack_vaapi;
