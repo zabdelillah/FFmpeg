@@ -6,7 +6,7 @@ RUN dnf install -y git make gcc mesa-libGLU mesa-libGLU-devel glew glew-devel gl
 	make; make install; \
 	popd; \
 	pushd src; \
-        ./configure --enable-opengl --enable-gpl --enable-libharfbuzz --extra-libs='-lGLEW -lEGL -lglfw -lSOIL -lGL' --extra-cflags="-I/usr/local/include/SOIL" --extra-ldflags="-L/usr/local/lib" --enable-libfreetype --enable-libfontconfig --enable-libfribidi
+        ./configure --enable-opengl --enable-gpl --enable-libharfbuzz --extra-libs='-lGLEW -lEGL -lglfw -lSOIL -lGL' --extra-cflags="-I/usr/local/include/SOIL" --extra-ldflags="-L/usr/local/lib" --enable-libfreetype --enable-libfontconfig --enable-libfribidi; \
 	make -j16; make install; \
 	popd;
 	
