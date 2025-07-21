@@ -1,6 +1,6 @@
 FROM fedora:rawhide
 COPY . /src
-RUN dnf install -y x264 x264-devel x265 x265-devel git make gcc mesa-libGLU mesa-libGLU-devel glew glew-devel glfw-devel nasm diffutils fontconfig-devel fribidi-devel freetype-devel harfbuzz-devel; \
+RUN dnf install -y git make gcc mesa-libGLU mesa-libGLU-devel glew glew-devel glfw-devel nasm diffutils fontconfig-devel fribidi-devel freetype-devel harfbuzz-devel x264 x264-devel x265 x265-devel ; \
 	git clone https://github.com/kbranigan/Simple-OpenGL-Image-Library.git soil; \
 	pushd soil; \
 	make; make install; \
