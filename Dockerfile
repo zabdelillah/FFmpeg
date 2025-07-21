@@ -1,12 +1,12 @@
 FROM fedora:rawhide
 COPY . /src
-RUN dnf install -y git make gcc mesa-libGLU mesa-libGLU-devel glew glew-devel glfw-devel nasm diffutils fontconfig-devel fribidi-devel freetype-devel harfbuzz-devel; \
+RUN dnf install -y x264 x264-devel x265 x265-devel git make gcc mesa-libGLU mesa-libGLU-devel glew glew-devel glfw-devel nasm diffutils fontconfig-devel fribidi-devel freetype-devel harfbuzz-devel; \
 	git clone https://github.com/kbranigan/Simple-OpenGL-Image-Library.git soil; \
 	pushd soil; \
 	make; make install; \
 	popd; \
 	pushd src; \
-        ./configure --enable-opengl --enable-gpl --enable-libharfbuzz --extra-libs='-lGLEW -lEGL -lglfw -lSOIL -lGL' --extra-cflags="-I/usr/local/include/SOIL" --extra-ldflags="-L/usr/local/lib" --enable-libfreetype --enable-libfontconfig --enable-libfribidi; \
+        ./configure --enable-opengl --enable-gpl --enable-libharfbuzz --enable-libx264 --enable-libx265 --extra-libs='-lpthread -lm -lGLEW -lEGL -lglfw -lSOIL -lGL' --extra-cflags="-I/usr/local/include/SOIL" --extra-ldflags="-L/usr/local/lib" --enable-libfreetype --enable-libfontconfig --enable-libfribidi; \
 	make -j16; make install; \
 	popd;
 	
