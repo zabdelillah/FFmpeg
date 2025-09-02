@@ -1,6 +1,6 @@
 FROM nvidia/cuda:13.0.0-devel-ubuntu24.04
 COPY . /src
-RUN apt-get install -y \
+RUN apt-get update; apt-get install -y \
 		git \
 		make \
 		gcc \
