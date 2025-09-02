@@ -11,6 +11,7 @@
 #include "formats.h"
 
 #ifndef __APPLE__
+# define GL_TRANSITION_USING_EGL
 #endif
 
 #ifdef __APPLE__
