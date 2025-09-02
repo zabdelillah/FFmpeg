@@ -7,7 +7,7 @@ name: Docker
 
 on:
   push:
-    branches: [ "gl-transitions" ]
+    branches: [ "gl-transitions", "gl-transitions-gpu" ]
     tags: [ 'v*.*.*' ]
 
 env:
