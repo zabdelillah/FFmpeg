@@ -20,7 +20,7 @@ RUN apt-get update; apt-get install -y \
 	cd soil; \
 	make; make install; \
 	cd ..; \
-	git clone https://github.com/FFmpeg/nv-codec-headers.git \
+	git clone https://github.com/FFmpeg/nv-codec-headers.git; \
 	cd nv-codec-headers; \
 	make; make install; \
 	cd ..; \
