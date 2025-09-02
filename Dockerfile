@@ -21,8 +21,8 @@ RUN apt-get update; apt-get install -y \
 	make; make install; \
 	cd ..; \
 	cd src; \
-        ./configure --enable-opengl --enable-gpl --enable-libharfbuzz --enable-libx264 --enable-libx265 --extra-libs='-lpthread -lm -lGLEW -lEGL -lglfw -lSOIL -lGL' --extra-cflags="-I/usr/local/include/SOIL" --extra-ldflags="-L/usr/local/lib" --enable-libfreetype --enable-libfontconfig --enable-libfribidi --enable-nonfree --enable-cuda-nvcc --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64 --nvccflags="-gencode arch=compute_75,code=sm_75 -O2" --disable-static --enable-shared; \
+        ./configure --enable-opengl --enable-gpl --enable-libharfbuzz --enable-libx264 --enable-libx265 --extra-libs='-lpthread -lm -lGLEW -lEGL -lglfw -lSOIL -lGL' --extra-cflags="-I/usr/local/include/SOIL" --extra-ldflags="-L/usr/local/lib" --enable-libfreetype --enable-libfontconfig --enable-libfribidi --enable-nonfree --enable-cuda-nvcc --enable-libnpp --enable-cuda --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64 --nvccflags="-gencode arch=compute_75,code=sm_75 -O2" --disable-static --enable-shared; \
 	make -j16; make install; \
 	cd ..;
 	
-ENTRYPOINT ["/usr/bin/ffmpeg"]
+ENTRYPOINT ["/usr/local/bin/ffmpeg"]
