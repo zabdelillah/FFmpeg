@@ -14,6 +14,7 @@ RUN apt-get update; apt-get install -y \
 		libfreetype6-dev \
 		libharfbuzz-dev \
 		libx264-dev \
+		yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev \
 		libx265-dev; \
 	git clone https://github.com/kbranigan/Simple-OpenGL-Image-Library.git soil; \
 	cd soil; \
